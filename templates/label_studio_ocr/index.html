@@ -43,24 +43,24 @@ var labelStudio = new LabelStudio('label-studio', {
         lastName: "Network"
     },
 
-    task: {
-        annotations: JSON.parse(`${annotations}`.replace(/&quot;/g,'"')),
-        predictions: [],
-        id: ${id},
-        data: {
-        ocr: "${image}"
-        }
-    },
-
-
     // task: {
-    //     annotations: JSON.parse('[]'),
+    //     annotations: JSON.parse(`${annotations}`.replace(/&quot;/g,'"')),
     //     predictions: [],
-    //     id: 1,
+    //     id: ${id},
     //     data: {
-    //         ocr: "https://ipfs.effect.ai/ipfs/QmX6FcAAfS9SL9KkKhiZumAUeaAyr4HsWp3rHopjzQSSg4"
+    //     ocr: "${image}"
     //     }
     // },
+
+
+    task: {
+        annotations: JSON.parse('[]'),
+        predictions: [],
+        id: 1,
+        data: {
+            ocr: "https://ipfs.effect.ai/ipfs/QmX6FcAAfS9SL9KkKhiZumAUeaAyr4HsWp3rHopjzQSSg4"
+        }
+    },
 
     onSubmitAnnotation: function(ann) {
         updateOrSubmitAction()
