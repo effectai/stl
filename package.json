@@ -1,0 +1,21 @@
+{
+	"name": "@effectai/stl",
+	"bin": {
+		"stl": "src/index.ts"
+	},
+	"module": "src/index.ts",
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "^1.7.3",
+		"@types/bun": "latest",
+		"@types/inquirer": "^9.0.7"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"@effectai/sdk": "^2.0.0",
+		"@inquirer/prompts": "^5.0.4",
+		"@wharfkit/wallet-plugin-privatekey": "^1.1.0"
+	}
+}
