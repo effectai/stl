@@ -1,0 +1,183 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "annotations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "completed_by": {
+                        "type": "integer"
+                    },
+                    "result": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "original_width": {
+                                    "type": "integer"
+                                },
+                                "original_height": {
+                                    "type": "integer"
+                                },
+                                "image_rotation": {
+                                    "type": "integer"
+                                },
+                                "value": {
+                                    "type": "object",
+                                    "properties": {
+                                        "x": {
+                                            "type": "number"
+                                        },
+                                        "y": {
+                                            "type": "number"
+                                        },
+                                        "width": {
+                                            "type": "number"
+                                        },
+                                        "height": {
+                                            "type": "number"
+                                        },
+                                        "rotation": {
+                                            "type": "integer"
+                                        },
+                                        "text": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "x",
+                                        "y",
+                                        "width",
+                                        "height",
+                                        "rotation"
+                                    ]
+                                },
+                                "id": {
+                                    "type": "string"
+                                },
+                                "from_name": {
+                                    "type": "string"
+                                },
+                                "to_name": {
+                                    "type": "string"
+                                },
+                                "type": {
+                                    "type": "string"
+                                },
+                                "origin": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "original_width",
+                                "original_height",
+                                "image_rotation",
+                                "value",
+                                "id",
+                                "from_name",
+                                "to_name",
+                                "type",
+                                "origin"
+                            ]
+                        }
+                    },
+                    "was_cancelled": {
+                        "type": "boolean"
+                    },
+                    "ground_truth": {
+                        "type": "boolean"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "lead_time": {
+                        "type": "number"
+                    },
+                    "prediction": {
+                        "type": "object"
+                    },
+                    "result_count": {
+                        "type": "integer"
+                    },
+                    "unique_id": {
+                        "type": "string"
+                    },
+                    "last_action": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "task": {
+                        "type": "integer"
+                    },
+                    "project": {
+                        "type": "integer"
+                    },
+                    "updated_by": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "parent_prediction": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "parent_annotation": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "last_created_by": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "id",
+                    "completed_by",
+                    "result",
+                    "was_cancelled",
+                    "ground_truth",
+                    "created_at",
+                    "updated_at",
+                    "lead_time",
+                    "prediction",
+                    "result_count",
+                    "unique_id",
+                    "task",
+                    "project"
+                ]
+            }
+        },
+        "image": {
+            "type": "string",
+            "format": "uri"
+        },
+        "id": {
+            "type": "integer"
+        }
+    },
+    "required": [
+        "image"
+    ]
+}
